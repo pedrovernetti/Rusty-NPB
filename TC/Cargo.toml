@@ -1,0 +1,36 @@
+# Cargo.toml
+
+[package]
+name = "Rusty-NPB"
+authors = ["Pedro Vernetti G. <pedrovernetti@gmail.com>"]
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+
+[profile.dev]
+opt-level = 3
+debug = 0
+lto = true
+
+[profile.release]
+opt-level = 3
+debug = 0
+lto = true
+
+[profile.test]
+opt-level = 3
+debug = 0
+lto = true
+
+[profile.bench]
+opt-level = 3
+debug = 0
+lto = true
+
+[dependencies]
+pkg_compile_time = "*"
+rustc_version = "*"
+
+[[bin]]
+name = "EP"
+path = "EP.rs"
